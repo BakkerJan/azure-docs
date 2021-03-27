@@ -106,15 +106,16 @@ Add-AzureADGroupMember -ObjectId $roleAssignablegroup.Id -RefObjectId $member.Ob
 ```http
 POST https://graph.microsoft.com/beta/groups
 {
-"description": "This group is assigned to Helpdesk Administrator built-in role of Azure AD.",
-"displayName": "Contoso_Helpdesk_Administrators",
-"groupTypes": [
-"Unified"
-],
-"mailEnabled": true,
-"securityEnabled": true
-"mailNickname": "contosohelpdeskadministrators",
-"isAssignableToRole": true,
+  "description": "Group assignable to a role",
+  "displayName": "Role assignable group",
+  "groupTypes": [
+    "Unified"
+  ],
+  "isAssignableToRole": true,
+  "mailEnabled": true,
+  "securityEnabled": true,
+  "mailNickname": "contosohelpdeskadministrators",
+  "visibility" : "Private"
 }
 ```
 
